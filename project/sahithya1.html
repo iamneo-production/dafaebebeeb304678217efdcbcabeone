@@ -44,4 +44,16 @@
                         return cells[a];
                     }
                 }
+                if(cells.every(cell=>cell)){
+                    return 'T';
+                }
+                return null;
+            }
+            function handleClick(index){
+                if(cells[index]||checkWinner())return;
+                cells[index]=currentPlayer;
+                const cell=document.createElement('div');
+                cell.classList.add('cell');
+                cell.textContent=currentPlayer;
+                board.appendChild(cell);
             }
