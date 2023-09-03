@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tic Tac Toe</title>title>
+        <title>Tic Tac Toe</title>
         <style>
             .board{
                 display: grid;
@@ -70,5 +70,10 @@
             cells.forEach((_,index)=>{
                 const cell=document.createElememt('div');
                 cell.classList.add('cell');
-                cell.addEventListener('click',()=>handleClick)
-            })
+                cell.addEventListener('click',()=>handleClick(index));
+                board.appendChild(cell);
+            });
+            </script>
+            </body>
+            </html>
+
