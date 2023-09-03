@@ -56,4 +56,19 @@
                 cell.classList.add('cell');
                 cell.textContent=currentPlayer;
                 board.appendChild(cell);
+                const winner=checkWinner();
+                if(winner){
+                    if(winner==='T'){
+                        alert("It's a Tie!");
+                    }else{
+                        alert(`${winner}wins!`);
+                    }
+                }else{
+                    currentPlayer=currentPlayer==='X'?'O':'X';
+                }
             }
+            cells.forEach((_,index)=>{
+                const cell=document.createElememt('div');
+                cell.classList.add('cell');
+                cell.addEventListener('click',()=>handleClick)
+            })
